@@ -1,21 +1,13 @@
-import Card from "./components/card/Card";
-import { languages } from "./helper/data";
-import "./app.css";
-import react from "./assets/react.svg";
+import { Container } from "react-bootstrap";
+import Card from "./components/Card";
+import Header from "./components/Header";
 
 function App() {
   return (
-    <>
-      <div className="reactbig">
-        <h2>Languages</h2>
-        <img className="react" src={react} alt="" />
-      </div>
-      <div className="App">
-        {languages.map((item) => {
-          return <Card key={item.name} item={item} />;
-        })}
-      </div>
-    </>
+    <Container className="text-center mt-4 p-4">
+      <Header />
+      <Card />
+    </Container>
   );
 }
 
